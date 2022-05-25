@@ -93,6 +93,10 @@ impl LedMatrix {
 
         LedCanvas { handle }
     }
+
+    pub fn set_brightness(&self, brightness: u8) {
+        unsafe { ffi::led_matrix_set_brightness(self.handle, brightness) }
+    }
 }
 
 impl Drop for LedMatrix {

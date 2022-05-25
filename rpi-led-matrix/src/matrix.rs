@@ -94,7 +94,7 @@ impl LedMatrix {
         LedCanvas { handle }
     }
 
-    pub fn set_brightness(&self, brightness: u8) {
+    pub fn set_brightness(&self, brightness: i32) {
         unsafe { ffi::led_matrix_set_brightness(self.handle, brightness) }
     }
 }
